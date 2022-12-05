@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+        #data td{
+            background-color: rgb(196, 225, 227);
+            padding: 15px;
+        }
+        #data th{
+            background-color:rgb(137, 183, 186);
+            padding: 20px;
+        }
+        #body{
+            background-color: blanchedalmond;
+        }
+ 
+
+       </style>
+    </head>
+
+<body>    
+    <div class="container" style="margin: auto;width:250px;">
+        <button onclick="myFunction()">Click here!</button>
+            <p id="demo" ></p>
+    </div>
+            <script >
+            const names = ["Anakin","Obi-Wan","Luke","Liea"];
+            const age = [23,25,20,21]
+            function myFunction() {
+                let Len = names.length;
+                let text = "<table id=data>"
+                text += "<tr> <th>" + "S.no" +"</th> <th>" + "Name" +"</th> <th>"+ "Age" +"</th> <tr>"
+                for (let i = 0; i < Len; i++) {
+                    text += "<tr> <td>" + (i+1) + "</td> <td>" + names[i] + "</td> <td>" + age[i] + "</td> </tr>";
+                }
+                text += "</table>"
+                document.getElementById("demo").innerHTML = text;
+                }
+            </script>
+</body>
+</html>
